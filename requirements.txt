@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+ddgs
+python-dotenv
+jupyter
+ipykernel
+streamlit

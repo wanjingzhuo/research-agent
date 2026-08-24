@@ -1,0 +1,153 @@
+{
+  "goal": "What is the gold price today, and what moved it this past month?",
+  "state": [
+    {
+      "action": "SEARCH",
+      "query": "gold price today past month what moved it",
+      "result": [
+        {
+          "title": "Gold - Price - Chart - Historical Data - News",
+          "url": "https://tradingeconomics.com/commodity/gold",
+          "snippet": "3 days ago - Gold rose to around $4,630 an ounce on Monday, extending last week\u2019s gains and reaching its highest level since mid-May, as concerns over US debt management and fiscal sustainability persisted following the Treasury\u2019s unexpected ramp-up in longer-dated debt buybacks."
+        },
+        {
+          "title": "Gold Price History - Historical Gold Charts and Prices",
+          "url": "https://goldprice.org/gold-price-history.html",
+          "snippet": "For easy reference, this page also contains a simple table that provides gold\u2019s price change and percentage change using a single day, 30 day, six month, one year, five year and 16 year timeframes. Over the past several decades, the price of gold has been influenced by many different factors."
+        },
+        {
+          "title": "Gold Price History: Charts & Data Since 1971",
+          "url": "https://www.usagold.com/daily-gold-price-history/",
+          "snippet": "June 8, 2026 - The most valuable analysis in today\u2019s daily precious metals market report comes from CNBC\u2019s market desk in \u201cGold rebounds as bond jitters, debt fears and weaker dollar revive bullion demand,\u201d published August 21, 2026, which paired the ..."
+        },
+        {
+          "title": "Live Gold Spot Price Chart | BullionVault",
+          "url": "https://www.bullionvault.com/gold-price-chart.do",
+          "snippet": "17 hours ago - ... Looking at past performance, gold priced in US Dollars rose above $2000 per ounce for the first time in August 2020, jumping as the Covid-19 pandemic and subsequent global economic crisis drove investors to seek safety in physical bullion."
+        },
+        {
+          "title": "Gold Price for Last Month USD - GoldCore",
+          "url": "https://www.goldcore.com/gold-price/one-month-gold-price",
+          "snippet": "Today, I sat down with Michael Oliver, founder of Momentum Structural Analysis, to discuss what his analysis is telling him about precious metals and the wider financial markets. Despite the sharp correction earlier this year, Michael believes the underlying structure of gold and silver has remained remarkably resilient. Rather than signalling the end of the [\u2026] ... Is the U.S. About to Revalue Gold? What It Means for You!"
+        }
+      ]
+    },
+    {
+      "action": "READ",
+      "url": "https://tradingeconomics.com/commodity/gold",
+      "result": "Gold - Price - Chart - Historical Data - News Calendar News Markets Commodities Indexes Shares Currencies Crypto Bonds Earnings Indicators Countries Forecasts Commodities Indexes Currencies Crypto Bonds Countries Indicators Members DATA PLANS Download historical data for 20 million indicators using your browser. Subscription Plans | Features API GATEWAY Direct access to our data from your apps using any programing language. Features | Docs | Developer Already a user? Login Calendar News Markets Commodities Indexes Shares Currencies Crypto Bonds Earnings Holidays Countries United States United Kingdom Euro Area Australia Canada Japan China Brazil Russia India More Countries Indicators Interest Rate Inflation Rate Unemployment Rate GDP Growth GDP per Capita Current Account Gold Reserves Government Debt Crude Oil Production Gasoline Prices Credit Rating More Indicators Forecasts Markets & Indicators Countries Countries Indicators Commodities Indexes Currencies Crypto Bonds Solutions Data Subscriptions API Access Pricing Apps App Store Google Play Twitter About Customers Investors Careers About us Contact Gold Price - Chart - Historical Data - News Summary Stats Forecast Alerts Actual 4,649.60 Daily Change 42.25 0.92% Monthly 14.03% Yearly 38.09% Q3 Forecast 4,653.07 Gold - Summary Gold rose nearly 1% to above $4,650 an ounce on Monday, reaching its highest level since mid-May, as a subdued dollar boosted the appeal of bullion. Investors are now awaiting US inflation data and comments from Federal Reserve Chair Kevin Warsh this week for clues on the interest-rate outlook. Gold gained more than 5% last week after a US Treasury buyback support plan pushed the dollar to multi-month lows. Markets are now focused on the July PCE price index due Wednesday and Warsh\u2019s speech at the Jackson Hole Symposium on Friday. Traders are pricing in roughly a 40% chance of a rate hike in September, while the probability of rates remaining unchanged stands at around 60%, according to CME FedWatch. On the geopolitical front, the US threatened Iran with what it described as \u201cthe greatest financial offensive ever marshalled,\u201d as Washington prepares to impose economic sanctions targeting Iran\u2019s trade partners. Gold - Stats Gold rose to 4,659.78 USD/t.oz on August 24, 2026, up 1.14% from the previous day. Over the past month, Gold's price has risen 14.28%, and is up 38.40% compared to the same time last year, according to trading on a contract for difference (CFD) that tracks the benchmark market for this commodity.  Historically, Gold reached an all time high of 5608.35 in January of 2026. Gold - data, forecasts, historical chart - was last updated on  August 24 of 2026. Gold - Forecast Gold rose to 4,659.78 USD/t.oz on August 24, 2026, up 1.14% from the previous day. Over the past month, Gold's price has risen 14.28%, and is up 38.40% compared to the same time last year, according to trading on a contract for difference (CFD) that tracks the benchmark market for this commodity. Gold is expected to trade at 4653.07 USD/t oz. by the end of this quarter, according to Trading Economics global macro models and analysts expectations. Looking forward, we estimate it to trade at 5044.13 in 12 months time. Price Day Month Year Date Gold 4,649.60 42.25 0.92% 14.03% 38.09% Aug/24 Silver 68.67 -0.274 -0.40% 17.58% 78.05% Aug/24 Copper 6.60 0.0190 0.29% 3.99% 47.73% Aug/24 Steel 3,073.00 12.00 0.39% 0.39% -1.82% Aug/24 Lithium 160,500.00 8250 5.42% 9.56% 94.56% Aug/24 Platinum 1,892.40 -3.30 -0.17% 15.94% 42.11% Aug/24 Iron Ore 95.34 0.13 0.14% -3.06% -6.16% Aug/24 Related Last Previous Unit Reference United States Gold Reserves 8133.46 8133.46 Tonnes Jun 2026 Russia Gold Reserves 2282.98 2304.75 Tonnes Jun 2026 China Gold Reserves 2346.43 2313.46 Tonnes Jun 2026 India Gold Reserves 880.52 880.52 Tonnes Jun 2026 Germany Gold Reserves 3350.25 3350.25 Tonnes Mar 2026 France Gold Reserves 2437.00 2437.00 Tonnes Mar 2026 Italy Gold Reserves 2451.84 2451.87 Tonnes Mar 2026 United States Inflation Rate 3.40 3.50 percent Jul 2026 United States Fed Funds Interest Rate 3.75 3.75 percent Jul 2026 Gold Gold is one of the most widely followed precious metals and is often regarded as a safe-haven asset during periods of economic uncertainty, inflation, and geopolitical risk. It plays a dual role as both an investment and a consumer good, with demand driven by financial markets, jewelry consumption, and industrial use. Gold is primarily traded on the over-the-counter London market, as well as on major exchanges such as the COMEX and the Shanghai Gold Exchange (SGE). Standard futures contracts typically represent 100 troy ounces. Globally, gold demand is led by jewelry consumption, followed by investment demand and a smaller share from industrial applications. On the supply side, China, Australia, the United States, South Africa, Russia, Peru, and Indonesia are among the largest producers. Major consumers of gold jewelry include India, China, the United States,"
+    },
+    {
+      "action": "READ",
+      "url": "https://www.usagold.com/daily-gold-price-history/",
+      "result": "[failed to read: HTTP 403 Forbidden]"
+    },
+    {
+      "action": "SEARCH",
+      "query": "Gold rebounds as bond jitters debt fears and weaker dollar revive bullion demand",
+      "result": [
+        {
+          "title": "10 Best Gold Investments 2026 - 10 Best Gold Investing Sites",
+          "url": "https://www.bing.com/aclick?ld=e8XZCH3BBFyJOxGyedO9pqsjVUCUx56G7HcL0CYpngvB58__FD3eCvEjAf3oGNDLU7OokE712n2zYuPgFkB83wDGDpxVwIcEyWox4BnGDKnV8fucR-ohP26ujni3cuOOVH65aTsIm2jQgwVI19CxZILAuz2qVD0G4c1fpayqrMlautLcChOZtjqbDjr48R-6GYnsvEP5eu5SsXqlBH6jzTDzUy-e0&u=aHR0cHMlM2ElMmYlMmZ3d3cuY29uc3VtZXJzYWR2b2NhdGUub3JnJTJmZ29sZC1pcmFzJTJmbHAlMmZzZW0tY3QtMyUzZnBkJTNkdHJ1ZSUyNmtleXdvcmQlM2Rnb2xkJTI1MjBhcyUyNTIwYW4lMjUyMGludmVzdG1lbnQlMjZnY2FfY2FtcGFpZ25pZCUzZDM4Mjg2MjI3NiUyNmdjYV9hZGdyb3VwaWQlM2QxMjE4MjU5MzcwNTQ2ODI2JTI2Z2NhX21hdGNodHlwZSUzZHAlMjZnY2FfbmV0d29yayUzZG8lMjZnY2FfZGV2aWNlJTNkYyUyNmdjYV9hZHBvc2l0aW9uJTNkJTI2Z2NhX2xvY19pbnRlcmVzdF9tcyUzZCUyNmdjYV9sb2NfcGh5c2ljYWxfbXMlM2QxNjQlMjZnY2FfY3JlYXRpdmUlM2QlMjZtc2Nsa2lkJTNkZWVmMjdkNmI5ZTVjMTU5NTVjYmMxN2U3ZTY2YTYwMTA&rlid=eef27d6b9e5c15955cbc17e7e66a6010",
+          "snippet": "We Reviewed the 10 Top Gold Investment Providers For You. Protect Yourself From Inflation. Diversify Your Retirement Portfolio by Investing in Gold IRAs. Highest Ranked Companies \u00b7 Trusted by Millions \u00b7 2026's 5 Best \u00b7 2022's Top 10 List"
+        },
+        {
+          "title": "Gold rebounds as bond jitters, debt fears and weaker dollar ...",
+          "url": "https://www.cnbc.com/2026/08/21/gold-prices-us-debt-dollar.html",
+          "snippet": "3 days ago \u00b7 Gold prices climbed Friday, putting bullion on course for a gain of nearly 5% this week, as bond market jitters, a softer dollar and renewed concerns over U.S. debt helped revive demand for the ..."
+        },
+        {
+          "title": "Gold rebounds as bond jitters, debt fears and weaker dollar ...",
+          "url": "https://www.newsbreak.com/news/4841597419321-gold-rebounds-as-bond-jitters-debt-fears-and-weaker-dollar-revive-bullion-demand",
+          "snippet": "Gold is heading toward a weekly gain of nearly 5% after rebounding from its second-quarter slump. Bullion rose as a weaker dollar, bond market jitters and renewed fears over soaring U.S. debt weighed on markets this week."
+        },
+        {
+          "title": "Gold Rebounds, Debt Fears Revive Bullion Demand - Aug 21",
+          "url": "https://stockalpha.ai/alpha-breaking/gold-rebounds-debt-fears-revive-bullion-demand-aug-21-mt34zqmv",
+          "snippet": "3 days ago \u00b7 Gold is back in focus, trading above $3,300 per ounce this week as investors react to U.S. debt concerns, bond market jitters and a softer dollar. That combination has revived demand for bullion, providing a potential hedge for portfolios facing rising interest-rate volatility."
+        },
+        {
+          "title": "Gold rebounds as bond jitters, debt fears and weaker dollar ...",
+          "url": "https://three.ws/markets/news/2026-08/00d6ee96f89ba506-gold-rebounds-as-bond-jitters-debt-fears-and-weaker-dollar",
+          "snippet": "3 days ago \u00b7 Gold is rebounding as investors weigh U.S. debt concerns, a weaker dollar and stubbornly high Treasury yields."
+        }
+      ]
+    },
+    {
+      "action": "READ",
+      "url": "https://www.cnbc.com/2026/08/21/gold-prices-us-debt-dollar.html",
+      "result": "Gold prices rise as U.S. debt worries hit markets Skip Navigation Markets Pre-Markets U.S. Markets Europe Markets China Markets Asia Markets World Markets Currencies Prediction Markets Cryptocurrency Futures & Commodities Bonds Funds & ETFs Business Economy Finance Health & Science Media Real Estate Energy Climate Transportation Investigations Industrials Retail Wealth Sports Life Small Business Investing Personal Finance Fintech Financial Advisors Options Action ETF Street Buffett Archive Earnings Trader Talk Tech Cybersecurity AI Enterprise Internet Media Mobile Social Media CNBC Disruptor 50 Tech Guide Politics & Policy White House Policy Defense Congress Expanding Opportunity Europe Politics China Politics Asia Politics World Politics Video Latest Video Full Episodes Livestream Top Video Live Audio Europe TV Asia TV CNBC Podcasts CEO Interviews Digital Originals Watchlist Investing Club Trust Portfolio Analysis Trade Alerts Meeting Videos Homestretch Jim's Columns Education Subscribe PRO Pro News Josh Brown Mike Santoli Calls of the Day My Portfolio Livestream Full Episodes Stock Screener Market Forecast Options Investing Chart Investing Subscribe Livestream Menu Make It select USA INTL Livestream Search quotes, news & videos Livestream Watchlist SIGN IN Create free account Markets Business Investing Tech Politics & Policy Video Watchlist Investing Club PRO Livestream Menu Markets Gold rebounds as bond jitters, debt fears and weaker dollar revive bullion demand Published Fri, Aug 21 2026 7:35 AM EDT Updated Fri, Aug 21 2026 9:21 AM EDT Hugh Leask WATCH LIVE Key Points Gold is heading toward a weekly gain of nearly 5% after rebounding from its second-quarter slump. Bullion rose as a weaker dollar, bond market jitters and renewed fears over soaring U.S. debt weighed on markets this week. In this article @GC.1 XAU= UBS NEO-GB @GC26Z Follow your favorite stocks CREATE FREE ACCOUNT watch now VIDEO 4:21 04:21 Investors may be missing assets that embody 'deep time,' says First Eagle\u2019s Matt McLennan The Exchange Gold prices climbed Friday, putting bullion on course for a gain of nearly 5% this week, as bond market jitters, a softer dollar and renewed concerns over U.S. debt helped revive demand for the precious metal. Gold futures rose 1.67% to $4,647.70 in early trading Friday, while spot bullion prices notched a 1.55% gain, trading at $4,588.08. The advance caps a positive week for the precious metal, which is up 4.7% over the five-day period, with futures moving toward a three-month high. The rebound follows gold's sharp reversal from record highs of almost $5,600 earlier this year, and its worst quarterly perfomance since 2013 in the three months through June. Stock Chart Icon Stock chart icon Spot gold. Giovanni Staunovo, commodity analyst at UBS , said rising debt levels globally, coupled with sustained weakness in the dollar, underpinned gold's surge last year \u2014 and now those concerns are returning. \"[That] should lift the price of gold to $5,400 per ounce over the next 12 months, in our view,\" Staunovo told CNBC via email. The Treasury Department said Wednesday it would at least double the size of liquidity-support buybacks for 10- to 30-year government debt, an effort to stabilize a selloff in longer-dated Treasurys. The announcement initially pushed Treasury yields lower and weakened the dollar, sending gold prices higher. Structural drivers The buyback plan landed just as U.S. government debt topped $40 trillion for the first time ever. Diane Garrett, executive chairman and CEO of Hycroft Mining , said markets appear to now be reading the the moves as a signal that the debt load's cost and duration will now be a key factor shaping policy. \"That's exactly the kind of structural, long-term driver gold investors are underwriting,\" Garrett told CNBC via email. \"It also tracks with why central banks keep rotating reserves out of Treasuries and into gold.\" The World Gold Council's annual Central Bank Gold Reserves Survey , published in June, found that 89% of respondents expect global central bank gold reserves to increase over the next year. A record 45% expect their own institutions' holdings to rise, while 1% expect them to decline. \"While this does add a degree of volatility, we think it's supportive of the underlying demand trends for precious metals,\" Garrett added. Stock Chart Icon Stock chart icon Gold futures. \"Short-term moves like this week's announcement by Treasury Secretary Scott Bessent will keep driving volatility in the gold price, and tensions in the Middle East will add to that. However, the structural picture hasn't changed,\" said Theo Botoulas, CEO of Neo Energy Metals , a South Africa-focused gold and uranium developer. \"Annual gold consumption is running at record levels of almost 5,000 [metric] tons per annum. At the same time, supply increases by little more than 1.5% annually, providing a favorable backdrop for the market.\" Near-term headwinds However, analysts conceded that headw"
+    },
+    {
+      "action": "SEARCH",
+      "query": "Reuters gold prices August 2026 debt dollar Treasury buyback",
+      "result": [
+        {
+          "title": "Global yields fall after US Treasury boosts debt buybacks",
+          "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-19/",
+          "snippet": "5 days ago \u00b7 Longer-dated global bond yields retreated from multi-decade highs, the dollar tumbled and gold jumped on Wednesday after the U.S. Treasury Department said it would boost liquidity support for ..."
+        },
+        {
+          "title": "Treasury buyback renews dollar-debasement fears | Reuters",
+          "url": "https://www.reuters.com/legal/transactional/treasury-buyback-renews-dollar-debasement-fears-2026-08-21/",
+          "snippet": "3 days ago \u00b7 On Thursday, Treasury Secretary Scott Bessent told CNBC that the buyback could be more than $4 billion and that the market \"got a little bit ahead of itself\" with the recent selloff."
+        },
+        {
+          "title": "US Treasury Debt Buybacks Push Gold Up \u2014 Singapore Update ...",
+          "url": "https://goldsilverguide.sg/news/us-treasury-buybacks-gold-surges-august-2026",
+          "snippet": "4 days ago \u00b7 Singapore \u2014 August 20, 2026. The US Treasury announced a dramatic doubling of its long-term debt buyback programme this week, widening monthly purchases to US$50 billion and sparking a fierce rally in gold prices. Spot gold surged toward US$4,500 an ounce, its highest level yet, as yields on US Treasuries tumbled and the US dollar fell sharply."
+        },
+        {
+          "title": "Gold Nears Three-Month Peak on US Treasury Debt Buybacks ...",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-23/gold-holds-near-three-month-high-as-debasement-trade-returns",
+          "snippet": "1 day ago \u00b7 Gold climbed to the highest in more than three months as the US Treasury\u2019s bold intervention in the bond market revived concerns about fiscal policy and its impact on the dollar."
+        },
+        {
+          "title": "Global yields fall after US Treasury boosts debt buybacks",
+          "url": "https://www.kitco.com/news/off-the-wire/2026-08-19/global-yields-fall-after-us-treasury-boosts-debt-buybacks",
+          "snippet": "5 days ago \u00b7 But the retreat in yields weighed heavily on the dollar, even as it sent gold and cryptocurrency prices sharply higher\u2014a divergence that reflects growing unease over the U.S. debt trajectory."
+        }
+      ]
+    },
+    {
+      "action": "READ",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-19/",
+      "result": "[failed to read: HTTP 401 HTTP Forbidden]"
+    },
+    {
+      "action": "READ",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-08-19/global-yields-fall-after-us-treasury-boosts-debt-buybacks",
+      "result": "Global yields fall after US Treasury boosts debt buybacks | Kitco News BUY/SELL GOLD & SILVER Bullion Coins and Bars Precious Metals All Metal Quotes All Metal Quotes All Market Prices Base Metals Cryptocurrencies Kitco Fixes Shanghai Benchmark Text Quotes What\u2019s really moving prices? Gold Silver Platinum Palladium Rhodium Copper Aluminum Zinc Nickel Lead US Dollar \u2014 USD All Market Prices Precious Metals Gold Silver Platinum Palladium Gold price EUR Gold price GBP Gold price AUD Gold price JPY Gold price CHF Gold price CNY Gold price HKD Gold price INR Gold price BRL Gold price MXN Gold price ZAR Jeweler Resources Reference Tables Free Web Quote Banners Free Charts on Your Website Calculate precious metals value right here Cryptos Base Metals Markets Mining News About Kitco Forum NEW Jeweler Resources off-the-wire Global yields fall after US Treasury boosts debt buybacks By Reuters Published: Aug 19, 2026 - 8:10 PM Updated: Aug 19, 2026 - 8:19 PM Reuters NEW YORK, Aug 19 (Reuters) - Longer-dated global bond yields retreated from \u200bmulti-decade highs, the dollar tumbled and gold jumped on Wednesday after the U.S. Treasury Department said it would boost liquidity support for longer-dated securities, following \u200ca broad selloff fueled by fears over swelling sovereign debt. The U.S. Treasury Department said it would double the size of liquidity support buyback operations for longer-dated nominal coupon securities to at least $4 billion per operation from $2 billion. U.S. long-dated government yields fell by as much as 10 basis points, dragging European government bond yields down too. U.S. long bonds had hit their highest in nearly 20 years on \u200bTuesday, at nearly 5.34%, reflecting growing concerns about inflation and high debt. \"It goes to show a pretty strong acknowledgement from the administration that there's an inconsistent \u200bamount of demand, especially in off-the-run securities in the very back end of the Treasury curve,\" said Michael Lorizio, head of \u2060U.S. rates and mortgage trading at Manulife Investment Management in Boston. The Treasury launched the buyback program in May 2024 to help improve liquidity in the $32 trillion Treasury market, with \u200bso-called off-the-run securities\u2014older issues that trade less frequently\u2014seeing the weakest demand. Yields rise when bond prices fall. Because long-end sovereign yields act as a benchmark for the pricing of nearly \u200bevery other asset class, including mortgage rates, sharp increases in yields pose a broader risk to the economy. The drop in yields lifted stocks. The Nasdaq Composite (.IXIC), gained 0.31%, the S&P 500 (.SPX), was up 0.41% and the Dow Jones Industrial Average (.DJI), rose 0.29%. MSCI's gauge of stocks across the globe (.MIWD00000PUS), increased 0.06%. But the retreat in yields weighed heavily on the dollar, even as it sent gold and \u200bcryptocurrency prices sharply higher\u2014a divergence that reflects growing unease over the U.S. debt trajectory. Concerns about ballooning government debt typically erode confidence in fiat currencies, driving investors toward \u200bgold and other hard assets as a hedge. The dollar index , which measures the greenback against a basket of currencies including the yen and the euro, fell 0.75% to 98.90, with the euro \u200cup 0.79% \u2060at $1.1666. Against the Japanese yen , the dollar weakened 0.73% to 158.46. Bitcoin gained 5.63% to $68,191.56 and ethereum rose 9.23% to $2,088.95. HOPES FOR PEACE IN IRAN RECEDE Oil prices gained as the prospect receded of a deal to end the conflict in the Middle East. , U.S. crude rose 1.78% to $86.45 a barrel and Brent rose to $92.23 per barrel, up 1.32% on the day. Long-term borrowing costs from the U.S. to Germany and Japan have soared as investors grow increasingly anxious about ballooning government debt and elevated inflation, pressures compounded by the Iran conflict's impact on oil \u200bprices. German and French long-dated bond yields, which \u200bhad earlier risen to their highest in \u206015 and 18 years respectively, traded lower on the day , . \"What we've seen in the course of recent days is that the long end of the bond market has obviously been selling off and potentially becoming somewhat problematic for the play through to other \u200basset classes,\" Jeremy Stretch, head of G10 FX strategy at CIBC, said. \"Clearly, the Treasury Secretary has to be mindful of those \u200brisks and has made \u2060adjustments. That's why we are (now) seeing U.S. 30-year Treasury yields down sharply and the dollar cheapening.\" A rise in Japan's benchmark 10-year bond yield toward 3%, a three-decade high, is also a warning sign for global debt markets that for years have depended on low Japanese rates driving a constant flow of Japanese investment abroad. Minutes from the Federal Reserve's July meeting released on Wednesday \u2060showed that \u200bconcern about inflation deepened, with \"several\" policymakers ready to raise interest rates and \"many\" saying a hike in borrowing costs \u200bwould be needed if inflation does not decline to the U.S. central bank's"
+    }
+  ],
+  "report": "1. A list of findings:\n- Gold traded around $4,650 per troy ounce on August 24, 2026 (specifically $4,649.60, up 0.92% on the day), reaching its highest level since mid-May. [https://tradingeconomics.com/commodity/gold]\n- Over the past month, gold rose roughly 14% (14.03% per Trading Economics data; 14.28% on its CFD reference), rebounding from a weak second quarter when it posted its worst quarterly performance since 2013. [https://tradingeconomics.com/commodity/gold]\n- The key near-term catalyst was the U.S. Treasury's August 19 announcement that it would at least double liquidity-support buyback operations for longer-dated debt (to at least $4 billion per operation), which pushed Treasury yields down and the dollar lower, boosting gold. [https://www.kitco.com/news/off-the-wire/2026-08-19/global-yields-fall-after-us-treasury-boosts-debt-buybacks]\n- Renewed concerns over soaring U.S. government debt \u2014 which topped $40 trillion for the first time \u2014 plus bond-market jitters and a softer dollar, revived safe-haven demand for bullion. [https://www.cnbc.com/2026/08/21/gold-prices-us-debt-dollar.html]\n- Geopolitical risks, including U.S. threats of severe financial sanctions on Iran and the ongoing Middle East conflict (which also lifted oil), added to safe-haven flows into gold. [https://www.kitco.com/news/off-the-wire/2026-08-19/global-yields-fall-after-us-treasury-boosts-debt-buybacks]\n- Structural support came from central banks rotating reserves out of Treasuries and into gold; a World Gold Council survey found a record 45% of central banks expect to increase their own holdings. [https://www.cnbc.com/2026/08/21/gold-prices-us-debt-dollar.html]\n- Gold had reversed from record highs near $5,600 in January 2026 before the recent rebound, and UBS analysts see it reaching $5,400 over the next 12 months. [https://www.cnbc.com/2026/08/21/gold-prices-us-debt-dollar.html]\n\nSOURCES READ:\n- https://tradingeconomics.com/commodity/gold\n- https://www.cnbc.com/2026/08/21/gold-prices-us-debt-dollar.html\n- https://www.kitco.com/news/off-the-wire/2026-08-19/global-yields-fall-after-us-treasury-boosts-debt-buybacks\n\nLINKS FOUND BUT NOT READ:\n- https://goldprice.org/gold-price-history.html\n- https://www.usagold.com/daily-gold-price-history/\n- https://www.bullionvault.com/gold-price-chart.do\n- https://www.goldcore.com/gold-price/one-month-gold-price\n- https://www.reuters.com/world/china/global-markets-global-markets-2026-08-19/\n- https://www.reuters.com/legal/transactional/treasury-buyback-renews-dollar-debasement-fears-2026-08-21/\n- https://goldsilverguide.sg/news/us-treasury-buybacks-gold-surges-august-2026\n- https://www.bloomberg.com/news/articles/2026-08-23/gold-holds-near-three-month-high-as-debasement-trade-returns\n- https://stockalpha.ai/alpha-breaking/gold-rebounds-debt-fears-revive-bullion-demand-aug-21-mt34zqmv\n- https://www.newsbreak.com/news/4841597419321-gold-rebounds-as-bond-jitters-debt-fears-and-weaker-dollar-revive-bullion-demand\n- https://three.ws/markets/news/2026-08/00d6ee96f89ba506-gold-rebounds-as-bond-jitters-debt-fears-and-weaker-dollar",
+  "eval": {
+    "checks": [
+      {
+        "name": "Used the search tool",
+        "passed": true
+      },
+      {
+        "name": "Read more than one distinct valid source",
+        "passed": true
+      },
+      {
+        "name": "Finished within the step limit",
+        "passed": true
+      },
+      {
+        "name": "Produced a non-trivial report",
+        "passed": true
+      },
+      {
+        "name": "SOURCES READ list matches actual valid reads",
+        "passed": true
+      }
+    ],
+    "score": "5 of 5",
+    "sources_mismatch": {
+      "missing_from_list": [],
+      "falsely_claimed": []
+    }
+  }
+}
