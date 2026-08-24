@@ -46,9 +46,12 @@ assert MODEL, "MODEL missing in .env"
 
 def search_web(query):
     print(f"  [search_web] searching: {query}")
-    with DDGS() as ddgs:
-        results = list(ddgs.text(query, max_results=5))
-    return [{"title": r["title"], "url": r["href"], "snippet": r["body"]} for r in results]
+    try:
+        with DDGS() as ddgs:
+            results = list(ddgs.text(query, max_results=5))
+        return [{"title": r["title"], "url": r["href"], "snippet": r["body"]} for r in results]
+    except Exception as e:
+        return [{"title": "[search failed]", "url": "", "snippet": f"[search failed: {e}]"}]
 
 
 def read_webpage(url):
