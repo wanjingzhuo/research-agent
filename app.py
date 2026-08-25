@@ -17,11 +17,11 @@ import streamlit as st
 
 from research_agent import MAX_STEPS, run_agent, run_evals, save_run
 
-# Matches a leading "Findings" heading the model sometimes writes itself
+# Matches a leading "Findings" or "Finding" heading the model sometimes writes itself
 # (e.g. "1. Findings:", "Findings:", "**Findings**") so it isn't duplicated
 # under our own "#### Findings" header.
 _LEADING_FINDINGS_HEADING_RE = re.compile(
-    r"^\s*(?:\d+[\.\)]\s*)?\**findings\**:?\s*\n+", re.IGNORECASE
+    r"^\s*(?:\d+[\.\)]\s*)?\**findings?\**:?\s*\n+", re.IGNORECASE
 )
 
 st.set_page_config(page_title="Research Agent", page_icon="🔎", layout="wide")
@@ -99,6 +99,11 @@ if start_clicked:
     else:
         step_log = []
         steps_slot = st.empty()
+        # Created (and thus cleared) up front, before run_agent() runs, so any
+        # previous question's report/eval results don't linger on screen while
+        # this one is still researching.
+        report_slot = st.empty()
+        eval_slot = st.empty()
 
         def render_steps_expander(finished):
             # Expanded while the agent is still running so progress is visible;
@@ -122,20 +127,22 @@ if start_clicked:
 
         render_steps_expander(finished=True)
 
-        st.subheader("Final Report")
-        render_report(report)
+        with report_slot.container():
+            st.subheader("Final Report")
+            render_report(report)
 
-        with st.expander("Eval Results"):
-            eval_summary = run_evals(state, report)
-            for check in eval_summary["checks"]:
-                icon = "✅" if check["passed"] else "❌"
-                st.markdown(f"{icon} {check['name']}")
-            st.markdown(f"**Score:** {eval_summary['score']}")
+        with eval_slot.container():
+            with st.expander("Eval Results"):
+                eval_summary = run_evals(state, report)
+                for check in eval_summary["checks"]:
+                    icon = "✅" if check["passed"] else "❌"
+                    st.markdown(f"{icon} {check['name']}")
+                st.markdown(f"**Score:** {eval_summary['score']}")
 
-            mismatch = eval_summary["sources_mismatch"]
-            if mismatch["missing_from_list"]:
-                st.markdown(f"**Read but missing from SOURCES READ:** {mismatch['missing_from_list']}")
-            if mismatch["falsely_claimed"]:
-                st.markdown(f"**Claimed in SOURCES READ but never read:** {mismatch['falsely_claimed']}")
+                mismatch = eval_summary["sources_mismatch"]
+                if mismatch["missing_from_list"]:
+                    st.markdown(f"**Read but missing from SOURCES READ:** {mismatch['missing_from_list']}")
+                if mismatch["falsely_claimed"]:
+                    st.markdown(f"**Claimed in SOURCES READ but never read:** {mismatch['falsely_claimed']}")
 
         save_run(goal, state, report, eval_summary)

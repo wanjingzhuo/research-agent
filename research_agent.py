@@ -83,9 +83,8 @@ FINISH: you have enough info. Reply {"action": "FINISH", "report": "..."}
 
 Rules:
 - You must READ at least 3 different pages before you are allowed to FINISH.
-- Prefer news articles and analysis over live price-ticker pages or shopping/dealer
-  sites, because they usually explain WHY something changed, not just WHAT the
-  number is right now.
+- Prefer primary sources, news, and in-depth analysis over pages that only
+show a number or a product listing without explanation.
 
 When you FINISH, your report must have this structure:
 
