@@ -2,3 +2,4 @@
 .venv
 run_*.json
 *:Zone.Identifier
+_regression_logs/
