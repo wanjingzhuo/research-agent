@@ -67,6 +67,12 @@ def action_icon(action):
     }.get(action, "•")
 
 
+def escape_dollar_signs(text):
+    """Escape literal $ so Streamlit's markdown (KaTeX) doesn't mistake dollar
+    amounts like "$4,500" for LaTeX math delimiters."""
+    return text.replace("$", r"\$")
+
+
 def render_report(report):
     """Split the report into findings / SOURCES READ / LINKS FOUND BUT NOT READ."""
     if "SOURCES READ:" in report:
@@ -81,16 +87,19 @@ def render_report(report):
 
     findings_text = _LEADING_FINDINGS_HEADING_RE.sub("", findings_part.strip(), count=1).strip()
 
+    sources_text = sources_part.strip()
+    links_text = links_part.strip()
+
     st.markdown("#### Findings")
-    st.markdown(findings_text or "_No findings._")
+    st.markdown(escape_dollar_signs(findings_text) if findings_text else "_No findings._")
 
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("#### Sources Read")
-        st.markdown(sources_part.strip() or "_None._")
+        st.markdown(escape_dollar_signs(sources_text) if sources_text else "_None._")
     with col2:
         st.markdown("#### Links Found But Not Read")
-        st.markdown(links_part.strip() or "_None._")
+        st.markdown(escape_dollar_signs(links_text) if links_text else "_None._")
 
 
 if start_clicked:
