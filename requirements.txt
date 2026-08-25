@@ -1,6 +1,7 @@
 requests
 beautifulsoup4
 ddgs
+pypdf
 python-dotenv
 jupyter
 ipykernel
