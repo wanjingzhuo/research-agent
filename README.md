@@ -15,7 +15,8 @@ the instructor's five-prompt version.
 Give it a research question. It will:
 
 1. Search the web (DuckDuckGo, via `ddgs`)
-2. Read pages it finds relevant (BeautifulSoup, capped at 5000 characters)
+2. Read pages it finds relevant — HTML (BeautifulSoup) or PDF (pypdf), capped
+   at 5000 characters
 3. Decide whether it has enough — it is **not allowed to finish** until it has
    successfully read at least 3 distinct pages
 4. Write a report where every finding is tagged with the URL it came from, or
@@ -26,16 +27,24 @@ Give it a research question. It will:
 ## Why it's built this way
 
 A few design choices came out of debugging real runs, not just following a
-spec:
+spec. Some were discovered independently here; others were borrowed back
+after comparing this project against the instructor's spec-driven
+`research-scout` implementation, which had already solved a few of the same
+problems more thoroughly.
 
-- **HTTP errors and empty pages are treated as failed reads.** A page that
-  returns a 403, a 406, or 200-with-no-readable-text does not count toward
-  the "3 distinct pages" requirement — only pages that actually yielded
-  content do.
-- **The report's "Sources Read" list is cross-checked against the real run
-  state**, not just trusted. The model is asked to report which URLs it
-  read, and `run_evals()` verifies that claim against what actually
-  happened, flagging any mismatch.
+Found and fixed here first:
+
+- **HTTP errors, empty pages, and PDFs are all handled explicitly.** A page
+  that returns a 403, a 406, or 200-with-no-readable-text does not count
+  toward the "3 distinct pages" requirement — only pages that actually
+  yielded content do. PDF links (detected by Content-Type or a `.pdf`
+  extension) are parsed with `pypdf` instead of being fed to an HTML parser,
+  which previously returned raw compressed binary as garbage text.
+- **A source only counts if it was actually cited.** A page can be
+  successfully read but never end up supporting any finding (e.g. its content
+  turned out to be navigation menus or unrelated). Such pages are excluded
+  from "Sources Read" and from the "distinct valid source" eval check, and
+  are reported separately as read-but-not-quoted for debugging.
 - **The current date is injected into the prompt.** Without it, the model
   defaults to whatever "today" it assumed from training and can generate
   searches for the wrong year (verified: without this, a query for "this
@@ -46,6 +55,38 @@ spec:
 - **A single failed step does not kill the run.** Failures (a bad API call,
   malformed JSON from the model, an HTTP error) are logged into the agent's
   own state and the loop continues.
+- **The model cannot search the exact same query twice.** A repeated query
+  wastes a step and a real search request; it's rejected and logged so the
+  model is prompted to rephrase instead.
+
+Borrowed from `research-scout` after comparing the two implementations:
+
+- **Every decision includes a `reason` field**, so the model's stated
+  rationale is visible in the run log at each step, not just the action it
+  took.
+- **The model is told its exact step budget up front** ("you have at most N
+  steps total") and instructed to plan accordingly, rather than discovering
+  the limit only when it runs out.
+- **The "Sources Read" / "Also found" lists are built entirely from `state`**,
+  not written by the model. The model is told not to write its own source
+  list — the program constructs it after the run from what actually
+  happened, so it can't drift from reality the way a model-authored list can.
+- **The model cannot READ the same URL twice** — repeating one is refused
+  and logged, so a step isn't wasted re-fetching something already read
+  (successfully or not).
+- **FINISH is refused if the report is empty**, not just if too few pages
+  were read — an empty report used to be accepted as long as the page count
+  was met.
+
+## Known limitations
+
+- `read_webpage` extracts visible text only — it does not preserve hyperlinks
+  found within a page. If a page links to a more detailed source (e.g. a
+  syllabus PDF linked from a summary page), the agent has no way to discover
+  that link unless it also turns up separately in search results.
+- No mechanism yet distinguishes "this question needs live information" from
+  "this is common knowledge" — the 3-page-minimum rule applies uniformly, so
+  trivial questions still trigger a full search-and-read cycle.
 
 ## Setup
 
@@ -72,8 +113,8 @@ python research_agent.py "What is the gold price today, and what moved it this p
 python research_agent.py "your question" --eval
 ```
 
-`--eval` runs 5 automated checks after the agent finishes (used search, read
-more than one distinct valid source, finished within the step limit,
+`--eval` runs automated checks after the agent finishes (search was used,
+more than one distinct *cited* source, finished within the step limit,
 produced a non-trivial report, and the sources-read list matches what
 actually happened) and prints a score.
 
@@ -94,10 +135,14 @@ final report visible. Runs through the UI are saved the same way as CLI runs.
 ## Project structure
 
 ```
-research_agent.py   # core agent: tools, loop, eval, save
-app.py               # Streamlit UI
+research_agent.py     # core agent: tools, loop, eval, save
+app.py                 # Streamlit UI
 requirements.txt
-.env                 # not committed
+.env                   # not committed
+scripts/               # helper scripts (e.g. regression test runner)
+dev-notebooks/         # notebook history from the fake-model prototype
+                        # through the working agent — kept for reference,
+                        # not used at runtime
 ```
 
 ## What this project is not
