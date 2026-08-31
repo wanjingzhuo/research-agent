@@ -101,8 +101,11 @@ Create a `.env` file (never commit this):
 ```
 API_BASE_URL=https://opencode.ai/zen/v1
 API_KEY=your-own-key-here
-MODEL=hy3-free
+MODEL=your-model-name-here
 ```
+
+Available model names can change over time — check `GET <API_BASE_URL>/models`
+for the current list rather than assuming an example model name still works.
 
 ## Usage
 
