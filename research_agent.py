@@ -113,14 +113,18 @@ show a number or a product listing without explanation.
   find what you needed.
 - FINISH is refused if the report is empty, or if you have not yet read at
   least 3 different pages successfully.
+- "report" must be a single plain-text string (with newlines inside it as
+  needed) — never a nested object or list. Everything you want to say goes
+  inside that one string.
 
 When you FINISH, your report must have this structure:
 
-A list of findings. Each finding must end with the URL it came from, in
-square brackets, like this: [https://example.com/page]. If a finding is
-not supported by any specific source you read, end it with [no source]
-instead. Only cite a URL in a finding if you actually used the READ action
-on that page — do not cite a URL you only saw in search results.
+A list of findings, one per line, each starting with "- ". Do not run
+multiple findings together in one paragraph. Each finding must end with the
+URL it came from, in square brackets, like this: [https://example.com/page].
+If a finding is not supported by any specific source you read, end it with
+[no source] instead. Only cite a URL in a finding if you actually used the
+READ action on that page — do not cite a URL you only saw in search results.
 
 Do not write your own source lists — the program adds "SOURCES READ" and
 "LINKS FOUND BUT NOT READ" lists automatically from the pages you actually
@@ -144,14 +148,21 @@ def ask_model(goal, state, max_steps, max_retries=3):
     last_error = None
 
     for attempt in range(max_retries):
-        resp = requests.post(
-            f"{API_BASE_URL}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {API_KEY}",
-                "User-Agent": "research-agent/0.1"
-            },
-            json={"model": MODEL, "messages": messages}
-        )
+        try:
+            resp = requests.post(
+                f"{API_BASE_URL}/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {API_KEY}",
+                    "User-Agent": "research-agent/0.1"
+                },
+                json={"model": MODEL, "messages": messages},
+                timeout=60
+            )
+        except requests.exceptions.RequestException as e:
+            last_error = e
+            print(f"  [ask_model] request failed ({type(e).__name__}: {e}), waiting 5s before retry {attempt + 1}/{max_retries}")
+            time.sleep(5)
+            continue
 
         if resp.status_code == 429:
             wait = int(resp.headers.get("Retry-After", 5))
@@ -170,7 +181,13 @@ def ask_model(goal, state, max_steps, max_retries=3):
                 f"Response body: {resp.text[:500]}"
             )
 
-        raw = resp.json()["choices"][0]["message"]["content"]
+        try:
+            raw = resp.json()["choices"][0]["message"]["content"]
+        except (ValueError, KeyError, IndexError, TypeError) as e:
+            raise RuntimeError(
+                f"API response did not contain choices[0].message.content ({type(e).__name__}: {e})\n"
+                f"Response body: {resp.text[:500]}"
+            )
         raw = raw.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
         return json.loads(raw)
 
@@ -329,7 +346,23 @@ def run_agent(goal, on_step=None, max_steps=None):
             emit(step, decision, result)
 
         elif decision.get("action") == "FINISH":
-            findings_text = decision.get("report", "").strip()
+            report_field = decision.get("report", "")
+            if not isinstance(report_field, str):
+                print(f"  [blocked] FINISH rejected — report was {type(report_field).__name__}, not plain text")
+                error_entry = {
+                    "action": "ERROR",
+                    "detail": (
+                        f'FINISH rejected: "report" must be a single plain-text string, '
+                        f"not a {type(report_field).__name__}. Write your findings as "
+                        'one string (e.g. "- finding one [url]\\n- finding two [url]"), '
+                        "not a nested object or list."
+                    )
+                }
+                state.append(error_entry)
+                emit(step, error_entry, None)
+                continue
+
+            findings_text = report_field.strip()
             if not findings_text:
                 print("  [blocked] FINISH rejected — report was empty")
                 error_entry = {
@@ -366,7 +399,16 @@ def run_agent(goal, on_step=None, max_steps=None):
 
         else:
             print(f"  [warning] unrecognized action: {decision}")
-            error_entry = {"action": "ERROR", "detail": f"unrecognized decision: {decision}"}
+            error_entry = {
+                "action": "ERROR",
+                "detail": (
+                    f"unrecognized decision: {decision}. Your reply must be a JSON "
+                    'object with a top-level "action" key set to exactly "SEARCH", '
+                    '"READ", or "FINISH" — plus "reason" and the one matching field: '
+                    '"query" for SEARCH, "url" for READ, "report" for FINISH. No '
+                    "other shape is accepted."
+                )
+            }
             state.append(error_entry)
             emit(step, error_entry, None)
 
